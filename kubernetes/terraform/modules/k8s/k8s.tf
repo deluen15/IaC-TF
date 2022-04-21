@@ -26,7 +26,7 @@ resource "kubernetes_deployment" "aks-deployment" {
     }
   }
   spec {
-    replicas = "1"
+    replicas = "3"
     selector {
       match_labels = {
         app = "terraform-aks"
