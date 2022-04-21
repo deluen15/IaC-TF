@@ -7,7 +7,7 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name  = "tf_rg_blobstore"
-    storage_account_name = "tfstorageIaC"
+    storage_account_name = "endristorageiac"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
   }
