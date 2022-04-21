@@ -20,7 +20,6 @@ target/
 *.ipr
 
 ### NetBeans ###
-#/kubernetes/terraform/.terraform/providers/registry.terraform.io/
 /nbproject/private/
 /nbbuild/
 /dist/

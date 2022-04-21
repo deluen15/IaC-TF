@@ -17,7 +17,7 @@ resource "azurerm_container_group" "docker_CI" {
     name   = "iac-tf"
 
     ports {
-      port     = 80
+      port     = 8080
       protocol = "TCP"
     }
   }
