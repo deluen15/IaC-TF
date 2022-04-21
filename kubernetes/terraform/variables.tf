@@ -1,8 +1,8 @@
-#variable "serviceprinciple_id" {
-#}
-#
-#variable "serviceprinciple_key" {
-#}
+variable "serviceprinciple_id" {
+}
+
+variable "serviceprinciple_key" {
+}
 #
 #variable "tenant_id" {
 #}

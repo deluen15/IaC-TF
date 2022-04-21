@@ -18,8 +18,8 @@ resource "azurerm_kubernetes_cluster" "IaC-aks-cluster" {
   }
 
   service_principal {
-    client_id     = "b672f6f4-9f24-4ac0-9bae-cafcbfd49a08"
-    client_secret = "9Dw8Q~XEFHduBAv.iwbuYYgVNvOuubuRBVBaRbcn"
+    client_id     = var.serviceprinciple_id
+    client_secret = var.serviceprinciple_key
   }
   network_profile {
     network_plugin = "kubenet"
