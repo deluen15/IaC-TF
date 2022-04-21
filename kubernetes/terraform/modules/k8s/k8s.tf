@@ -5,7 +5,6 @@
 #      cluster_ca_certificate = var.cluster_ca_certificate
 #}
 terraform {
-  required_version = ">= 1.0.0"
   required_providers {
     kubernetes = {
       source = "hashicorp/kubernetes"

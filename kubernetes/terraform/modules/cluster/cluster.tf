@@ -2,6 +2,7 @@ resource "azurerm_resource_group" "IaC-aks-test" {
   location = var.location
   name     = "IaC-aks-test"
 }
+
 resource "azurerm_kubernetes_cluster" "IaC-aks-cluster" {
   name                = "IaC-aks-cluster"
   location            = azurerm_resource_group.IaC-aks-test.location
@@ -16,10 +17,10 @@ resource "azurerm_kubernetes_cluster" "IaC-aks-cluster" {
     type       = "VirtualMachineScaleSets"
   }
 
-    service_principal {
-      client_id     = "$(ARM_CLIENT_ID)"
-      client_secret = "$(ARM_CLIENT_SECRET)"
-    }
+  service_principal {
+    client_id     = var.appId
+    client_secret = var.password
+  }
   network_profile {
     network_plugin = "kubenet"
   }
