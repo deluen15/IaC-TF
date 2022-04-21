@@ -12,7 +12,7 @@ resource "azurerm_container_group" "docker_CI" {
   resource_group_name = azurerm_resource_group.docker_rg.name
   container {
     cpu    = 1
-    image  = "endritzeqo/iac-tf"
+    image  = "endritzeqo/iac-tf:${var.imagebuild}"
     memory = 1
     name   = "iac-tf"
 

@@ -9,11 +9,7 @@ resource "kubernetes_namespace" "aks-namespace" {
     name = "aks-deployment-and-service"
   }
 }
-variable "dockerimage" {
-  type        = string
-  description = "name of the docker image to deploy"
-  default     = "endritzeqo/iac-tf:latest"
-}
+
 resource "kubernetes_deployment" "aks-deployment" {
   metadata {
     namespace = kubernetes_namespace.aks-namespace.metadata.0.name
@@ -38,7 +34,7 @@ resource "kubernetes_deployment" "aks-deployment" {
       spec {
         container {
           #          image = "nginx:1.20.2-alpine"
-          image = var.dockerimage
+          image = "endritzeqo/iac-tf:${var.dockerimage}"
           name  = "aks-deployment"
           port {
             container_port = 8080

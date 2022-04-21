@@ -34,6 +34,7 @@ module "k8s" {
   client_key             = base64decode(module.cluster.client_key)
   cluster_ca_certificate = base64decode(module.cluster.cluster_ca_certificate)
   host                   = module.cluster.host
+  dockerimage            = var.imagebuild
 }
 
 module "docker" {
