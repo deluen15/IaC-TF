@@ -1,7 +1,6 @@
 HELP.md
-target/
 !target/aksIaC.jar
-!target/aksIaC.jar.original
+target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
