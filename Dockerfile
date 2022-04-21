@@ -9,5 +9,5 @@ COPY target/${JAR_FILE} /usr/share/${JAR_FILE}
 #VOLUME /main-app
 #ADD target/aksIaC.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/usr/share/aksIaC.jar"]
+ENTRYPOINT ["java","-jar","/usr/share/IaC-TF-0.0.1-SNAPSHOT.jar"]
 
