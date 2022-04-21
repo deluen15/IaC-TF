@@ -5,6 +5,12 @@ terraform {
       version = "3.2.0"
     }
   }
+  #  backend "azurerm" {
+  #    resource_group_name  = "tf_rg_blobstore"
+  #    storage_account_name = "tfstorageIaC"
+  #    container_name       = "tfstate"
+  #    key                  = "terraform.tfstate"
+  #  }
 }
 provider "azurerm" {
   subscription_id = var.subscription_id
@@ -29,7 +35,8 @@ module "k8s" {
   cluster_ca_certificate = base64decode(module.cluster.cluster_ca_certificate)
   host                   = module.cluster.host
 }
+
 module "docker" {
-  source = "./modules/docker/"
-  
+  source     = "./modules/docker/"
+  imagebuild = var.imagebuild
 }

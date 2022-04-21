@@ -35,7 +35,7 @@ resource "kubernetes_deployment" "aks-deployment" {
           image = "nginx:1.20.2-alpine"
           name  = "aks-deployment"
           port {
-            container_port = 8080
+            container_port = 80
           }
         }
       }
@@ -52,8 +52,8 @@ resource "kubernetes_service" "aks-service" {
       app = kubernetes_deployment.aks-deployment.spec.0.template.0.metadata[0].labels.app
     }
     port {
-      port        = 8080
-      target_port = 8080
+      port        = 80
+      target_port = 80
     }
     type     = "LoadBalancer"
   }

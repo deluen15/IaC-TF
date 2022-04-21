@@ -8,6 +8,7 @@ resource "azurerm_container_group" "docker_CI" {
   name                = "docker_CI"
   os_type             = "Linux"
   dns_name_label      = "iactest"
+  ip_address_type     = "Public"
   resource_group_name = azurerm_resource_group.docker_rg.name
   container {
     cpu    = 1
@@ -16,7 +17,7 @@ resource "azurerm_container_group" "docker_CI" {
     name   = "iac-tf"
 
     ports {
-      port     = 8080
+      port     = 80
       protocol = "TCP"
     }
   }

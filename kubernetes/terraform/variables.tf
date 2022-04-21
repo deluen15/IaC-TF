@@ -21,3 +21,7 @@ variable "location" {
 variable "kubernetes_version" {
   default = "1.23.3"
 }
+variable "imagebuild" {
+  type        = string
+  description = "Latest Image Build"
+}
