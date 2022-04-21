@@ -7,7 +7,7 @@ resource "azurerm_kubernetes_cluster" "IaC-aks-cluster" {
   location            = azurerm_resource_group.IaC-aks-test.location
   resource_group_name = azurerm_resource_group.IaC-aks-test.name
   dns_prefix          = "IaC-aks-cluster"
-  kubernetes_version  = var.kubernetes_version
+#  kubernetes_version  = var.kubernetes_version
 
   default_node_pool {
     name       = "default"
