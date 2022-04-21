@@ -1,8 +1,17 @@
-provider "kubernetes" {
-  #    host                   = var.host
-  #    client_certificate     = var.client_certificate
-  #    client_key             = var.client_key
-  #    cluster_ca_certificate = var.cluster_ca_certificate
+#provider "kubernetes" {
+#      host                   = var.host
+#      client_certificate     = var.client_certificate
+#      client_key             = var.client_key
+#      cluster_ca_certificate = var.cluster_ca_certificate
+#}
+terraform {
+  required_version = ">= 1.0.0"
+  required_providers {
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "~> 1.23.3"
+    }
+  }
 }
 resource "kubernetes_namespace" "aks-namespace" {
   metadata {
