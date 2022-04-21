@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"k8s","Source":"./modules/k8s","Dir":"modules/k8s"},{"Key":"cluster","Source":"./modules/cluster","Dir":"modules/cluster"},{"Key":"","Source":"","Dir":"."}]}
+{"Modules":[{"Key":"cluster","Source":"./modules/cluster","Dir":"modules/cluster"},{"Key":"docker","Source":"./modules/docker","Dir":"modules/docker"},{"Key":"","Source":"","Dir":"."},{"Key":"k8s","Source":"./modules/k8s","Dir":"modules/k8s"}]}

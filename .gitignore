@@ -20,7 +20,7 @@ target/
 *.ipr
 
 ### NetBeans ###
-/kubernetes/terraform/.terraform/providers/registry.terraform.io/
+#/kubernetes/terraform/.terraform/providers/registry.terraform.io/
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -32,3 +32,4 @@ build/
 
 ### VS Code ###
 .vscode/
+.terraform

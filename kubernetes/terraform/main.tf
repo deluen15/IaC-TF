@@ -29,3 +29,7 @@ module "k8s" {
   cluster_ca_certificate = base64decode(module.cluster.cluster_ca_certificate)
   host                   = module.cluster.host
 }
+module "docker" {
+  source = "./modules/docker/"
+  
+}
