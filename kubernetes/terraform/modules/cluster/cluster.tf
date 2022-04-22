@@ -17,13 +17,13 @@ resource "azurerm_kubernetes_cluster" "IaC-aks-cluster" {
     type       = "VirtualMachineScaleSets"
   }
 
-  #  service_principal {
-  #    client_id     = var.serviceprinciple_id
-  #    client_secret = var.serviceprinciple_key
-  #  }
-  identity {
-    type = "SystemAssigned"
+  service_principal {
+    client_id     = var.serviceprinciple_id
+    client_secret = var.serviceprinciple_key
   }
+  #  identity {
+  #    type = "SystemAssigned"
+  #  }
   network_profile {
     network_plugin = "kubenet"
   }
